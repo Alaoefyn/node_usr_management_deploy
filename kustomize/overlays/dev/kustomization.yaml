@@ -1,0 +1,9 @@
+namePrefix: dev-
+namespace: dev
+bases:
+  - ../../base
+imageTags:
+  - name: YOUR_IMG_REPO_NAME/nodejs-docker
+    newTag: v201
+patchesStrategicMerge:
+  - deployment-patch.yaml
