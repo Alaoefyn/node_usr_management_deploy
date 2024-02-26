@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usermgm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usermgm
+  template:
+    metadata:
+      labels:
+        app: usermgm
+    spec:
+      containers:
+        - name: app
+          image: YOUR_DOCKER_IMG_REP_NAME/nodejs-docker:latest
+          ports:
+            - containerPort: 4000
+          imagePullPolicy: Always
