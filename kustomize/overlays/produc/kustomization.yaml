@@ -1,0 +1,10 @@
+namePrefix: prod-
+namespace: prod
+bases:
+  - ../../base
+imageTags:
+  - name: DOCKER_IMG_REPO_NAME/nodejs-docker
+    newTag: v201
+patchesStrategicMerge:
+  - deployment-patch.yaml
+  - service-patch.yaml
